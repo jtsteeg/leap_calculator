@@ -1,7 +1,9 @@
 .calculator {
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    background-color: azure;
+    display:grid;
+    background-color: cadetblue;
+    grid-template-areas: 
+        'top top top top'
+        'bottom bottom bottom bottom';
     width: 25%;
     margin: 0;
     position: absolute;
@@ -10,6 +12,25 @@
     transform: translate(-50%, -50%);
     border: 3px solid;
     padding: 20px 20px;
+}
+.display {
+    grid-area: top;
+    padding: 20px;
+    text-align: right;
+    background-color: azure;
+    border: solid;
+}
+.input_output {
+    padding: 5px;
+    background-color: white;
+    border: solid;
+}
+.buttons {
+    grid-area: bottom;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    background-color: azure;
+    
 }
 .button {
     border: 1px solid;
