@@ -16,13 +16,12 @@
 .display {
     grid-area: top;
     padding: 20px;
-    text-align: right;
+    text-align: center;
     background-color: azure;
     border: solid;
 }
-.input_output {
-    padding: 5px;
-    background-color: white;
+input {
+    text-align: right;
     border: solid;
 }
 .buttons {
@@ -43,3 +42,4 @@
 .button:hover {
     background-color: yellow;
 }
+
