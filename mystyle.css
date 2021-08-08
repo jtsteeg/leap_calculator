@@ -1,10 +1,18 @@
-h1 {color: navy;}
 .calculator {
-    display: inline-grid;
+    display: grid;
     grid-template-columns: auto auto auto auto;
     background-color: azure;
+    width: 25%;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 3px solid;
+    padding: 20px 20px;
 }
 .button {
     border: 1px solid;
     padding: 20px;
+    text-align: center;
 }
