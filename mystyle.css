@@ -1,6 +1,6 @@
 .calculator {
     display:grid;
-    background-color: cadetblue;
+    background-color: teal;
     grid-template-areas: 
         'top top top top'
         'bottom bottom bottom bottom';
@@ -11,6 +11,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 10px 10px;
+    border-radius: 25px;
 }
 .display {
     grid-area: top;
@@ -18,10 +19,12 @@
     text-align: center;
     background-color: azure;
     border: solid;
+    border-radius: 25px 25px 1px 1px;
 }
 input {
     text-align: right;
     border: solid;
+    border-radius: 25px;
 }
 .buttons {
     grid-area: bottom;
@@ -31,12 +34,16 @@ input {
     cursor: pointer;
     grid-gap: 5px;
     padding: 5px;
-    border: solid;   
+    border: solid;  
+    border-radius: 1px 1px 25px 25px; 
 }
 .button {
     border: 1px solid;
+    border-radius: 25px;
     padding: 20px;
     text-align: center;
+    background-color:teal;
+    font-weight: bold;
     
 }
 .button:hover {
