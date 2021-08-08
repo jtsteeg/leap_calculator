@@ -34,7 +34,8 @@ input {
     cursor: pointer;
     grid-gap: 5px;
     padding: 5px;
-    border: solid;  
+    border: solid;
+    border-color: azure black black black;  
     border-radius: 1px 1px 25px 25px; 
 }
 .button {
@@ -43,10 +44,14 @@ input {
     padding: 20px;
     text-align: center;
     background-color:teal;
-    font-weight: bold;
-    
+    font-weight: bold;    
 }
 .button:hover {
     background-color: yellow;
 }
-
+#equals {
+    background-color: goldenrod;
+}
+#equals:hover {
+    background-color: yellow;
+}
