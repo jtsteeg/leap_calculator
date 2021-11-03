@@ -1,12 +1,12 @@
 .calculator {
     display:grid;
-    background-color: teal;
+    /*background-color: white;*/
     grid-template-areas: 
         'top top top top'
         'bottom bottom bottom bottom';
-    width: 25%;
+    width: 15%;
     margin: 0;
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -17,7 +17,7 @@
     grid-area: top;
     padding: 20px;
     text-align: center;
-    background-color: azure;
+    background-color: #05386b;
     border: solid;
     border-radius: 25px 25px 1px 1px;
 }
@@ -30,12 +30,12 @@ input {
     grid-area: bottom;
     display: grid;
     grid-template-columns: auto auto auto auto;
-    background-color: azure;
+    background-color: #05386b;
     cursor: pointer;
     grid-gap: 5px;
     padding: 5px;
     border: solid;
-    border-color: azure black black black;  
+    border-color: #05386b black black black;  
     border-radius: 1px 1px 25px 25px; 
 }
 .button {
@@ -43,7 +43,7 @@ input {
     border-radius: 25px;
     padding: 20px;
     text-align: center;
-    background-color:teal;
+    background-color:#379683;
     font-weight: bold;    
 }
 .button:hover {
