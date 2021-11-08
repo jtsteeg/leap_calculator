@@ -1,10 +1,10 @@
 (()=>{
     //elements
     var numbers = document.getElementsByClassName("numberButton");
+    var operators = document.getElementsByClassName("operatorButton");
     var numberDisplay = document.getElementById("numDisplay");
     var clearButton = document.getElementById("clearButton");
     var equalButton = document.getElementById("equals");
-    var plusButton = document.getElementById("plusButton");
 
     console.log(numbers);
     console.log(numberDisplay);
@@ -33,7 +33,7 @@
         }
 
         clearDisplay() {
-            numberDisplay.value = 0;
+            numberDisplay.value = "";
         }
 
         performMath(){
@@ -50,6 +50,12 @@
         });
     }
 
+    for(var i = 0; i < operators.length; i++) {
+        operators[i].addEventListener('click', function() {
+            calc.newOperatorInput(this.innerText);
+        });
+    }
+
     clearButton.addEventListener('click', () => {
         calc.clearDisplay();
     });
@@ -57,10 +63,4 @@
     equalButton.addEventListener('click', () => {
         calc.performMath();
     });
-
-    plusButton.addEventListener('click', () => {
-        calc.newOperatorInput(plusButton.innerText);
-    });
-
-
 })()

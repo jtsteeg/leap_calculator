@@ -38,7 +38,9 @@ input {
   border-color: #05386b black black black;
   border-radius: 1px 1px 25px 25px;
 }
-.button {
+.button,
+.numberButton,
+.operatorButton {
   border: 1px solid;
   border-radius: 25px;
   padding: 20px;
@@ -46,18 +48,9 @@ input {
   background-color: #379683;
   font-weight: bold;
 }
-.button:hover {
-  background-color: yellow;
-}
-.numberButton {
-  border: 1px solid;
-  border-radius: 25px;
-  padding: 20px;
-  text-align: center;
-  background-color: #379683;
-  font-weight: bold;
-}
-.numberButton:hover {
+.button:hover,
+.numberButton:hover,
+.operatorButton:hover {
   background-color: yellow;
 }
 #equals {
