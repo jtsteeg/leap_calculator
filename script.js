@@ -4,6 +4,7 @@
     var numberDisplay = document.getElementById("numDisplay");
     var clearButton = document.getElementById("clearButton");
     var equalButton = document.getElementById("equals");
+    var plusButton = document.getElementById("plusButton");
 
     console.log(numbers);
     console.log(numberDisplay);
@@ -15,13 +16,20 @@
         }
 
         newNumberInput(number) {
-            this.tempDisplay = this.tempDisplay * 10 + parseInt(number);
-            this.showOnDisplay();
+            numberDisplay.value = numberDisplay.value + number;
+        }
+
+        newOperatorInput(operator) {
+            isNaN(numberDisplay.value.slice(-1)) ? numberDisplay.value : numberDisplay.value = numberDisplay.value + operator;
+            console.log(typeof numberDisplay.value)
+            console.log(typeof operator)
         }
 
         showOnDisplay() {
             numberDisplay.value = this.tempDisplay;
             console.log(this.tempDisplay);
+            console.log(typeof this.tempDisplay);
+            console.log(typeof numberDisplay.value);
         }
 
         clearDisplay() {
@@ -29,7 +37,7 @@
         }
 
         performMath(){
-            numberDisplay.value = eval(numberDisplay.value);
+            isNaN(numberDisplay.value.slice(-1)) ? numberDisplay.value : numberDisplay.value = eval(numberDisplay.value);
         }
     }
 
@@ -48,6 +56,10 @@
 
     equalButton.addEventListener('click', () => {
         calc.performMath();
+    });
+
+    plusButton.addEventListener('click', () => {
+        calc.newOperatorInput(plusButton.innerText);
     });
 
 
