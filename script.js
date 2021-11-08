@@ -3,6 +3,7 @@
     var numbers = document.getElementsByClassName("numberButton");
     var numberDisplay = document.getElementById("numDisplay");
     var clearButton = document.getElementById("clearButton");
+    var equalButton = document.getElementById("equals");
 
     console.log(numbers);
     console.log(numberDisplay);
@@ -26,6 +27,10 @@
         clearDisplay() {
             numberDisplay.value = 0;
         }
+
+        performMath(){
+            numberDisplay.value = eval(numberDisplay.value);
+        }
     }
 
     var calc = new Calculator();
@@ -39,6 +44,10 @@
 
     clearButton.addEventListener('click', () => {
         calc.clearDisplay();
+    });
+
+    equalButton.addEventListener('click', () => {
+        calc.performMath();
     });
 
 
