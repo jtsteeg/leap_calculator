@@ -27,7 +27,10 @@
         }
 
         performMath(){
+            if(/[a-z]/i.test(numberDisplay.value)){
+            }else{
             isNaN(numberDisplay.value.slice(-1)) ? numberDisplay.value : numberDisplay.value = eval(numberDisplay.value);
+            }
         }
     }
 
