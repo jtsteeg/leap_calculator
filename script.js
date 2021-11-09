@@ -11,9 +11,6 @@
 
     //classes
     class Calculator{
-        constructor(){
-            this.tempDisplay = 0;
-        }
 
         newNumberInput(number) {
             numberDisplay.value = numberDisplay.value + number;
@@ -23,13 +20,6 @@
             isNaN(numberDisplay.value.slice(-1)) ? numberDisplay.value : numberDisplay.value = numberDisplay.value + operator;
             console.log(typeof numberDisplay.value)
             console.log(typeof operator)
-        }
-
-        showOnDisplay() {
-            numberDisplay.value = this.tempDisplay;
-            console.log(this.tempDisplay);
-            console.log(typeof this.tempDisplay);
-            console.log(typeof numberDisplay.value);
         }
 
         clearDisplay() {
